@@ -1,0 +1,19 @@
+domain: fountain.io
+layout:
+- go.kubebuilder.io/v4-alpha
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: memcached-operator
+repo: github.com/foroozf001/memcached-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: fountain.io
+  group: cache
+  kind: Memcached
+  path: github.com/foroozf001/memcached-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"
